@@ -1,0 +1,1 @@
+This is the FE React application for the Comparing Weather Predictions system.
