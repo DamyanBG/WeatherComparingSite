@@ -8,6 +8,7 @@ function Header() {
                 <ul>
                     <li>Predictions</li>
                     <li>Sites</li>
+                    <li>About</li>
                 </ul>
             </nav>
         </header>
