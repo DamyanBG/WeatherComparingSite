@@ -1,0 +1,1 @@
+export const ABSTRACT_API_KEY = process.env.REACT_APP_ABSTRACT_API_KEY
