@@ -1,8 +1,23 @@
 import "./Main.scss"
+import { ABSTRACT_API_KEY } from "../../utils/const"
+import { useEffect, useState } from "react"
 
 function MainPage() {
-    const currentLocation = "Dobrich"
+    const [currentLocation, setCurrentLocation] = useState("")
     const currentTemperature = "15 °C"
+
+    useEffect(() => {
+        getGeoInfo()
+    }, [])
+
+    const getGeoInfo = () => {
+        fetch(`https://ipgeolocation.abstractapi.com/v1/?api_key=${ABSTRACT_API_KEY}`)
+            .then(resp => resp.json())
+            .then(json => {
+                console.log(json)
+                setCurrentLocation(json.city)
+            })
+    }
 
     return (
         <div>
